@@ -1,4 +1,9 @@
+// Reference to the .rsrc file ID
+#define GUI_IMAGE_ID 128
+
 short quitting = 0;
+
+void draw_window(void);
 
 int 
 main()
@@ -7,7 +12,7 @@ main()
 	Rect win_bounds = { 50, 30, 0, 0 };
 	
 	WindowPtr win;
-	char title[] = "Our app";
+	char title[] = "GUI App Example";
 	
 	// If we use a Pascal string, we need to structure it like this
 	//Str255 title = "\pOur app";
@@ -24,7 +29,7 @@ main()
 	MaxApplZone();
 	
 	win_bounds.right = screenBits.bounds.right - 30;
-	win_bounds.bottom = screenBits.bounds.bottom - 30;
+	win_bounds.bottom = screenBits.bounds.bottom - 10;
 	
 	// Definition of our new window. CtoPstr converts our C char to a Pascal title
 	win = NewWindow(0L, &win_bounds, CtoPstr(title), true, 
@@ -32,6 +37,10 @@ main()
 		
 	if(!win)
 		ExitToShell();
+		
+	SetPort(win);
+		
+	draw_window();
 		
 	while(!quitting) {
 		EventRecord event;
@@ -56,6 +65,36 @@ main()
 						break;		
 				}
 				break;
+			case updateEvt:
+				BeginUpdate(event_win);
+				// tells the system that you're going to redraw the window
+				draw_window();
+				EndUpdate(event_win);
+				break;
 		}
 	}
+}
+
+void
+draw_window(void) {
+	// Handles are a pointer to a pointer.
+	// You get a pointer to memory, but memory can move around. The data for pic
+	// will move around, such as with new memory allocation, or defragmentation
+	PicHandle pic;
+	Rect pic_rect = { 0 };
+	
+	pic = GetPicture(GUI_IMAGE_ID);
+	if(!pic) {
+		quitting = 1;
+		return;
+		// We could also call ExitToShell here, but this ends the function more cleanly
+	}
+	
+	// Windows don't actually exist, you're just drawing wherever the window's coordinates happen to be.
+	// Coords are relative to the port
+	
+	pic_rect.right = (**(pic)).picFrame.right;
+	pic_rect.bottom = (**(pic)).picFrame.bottom;
+	
+	DrawPicture(pic, &pic_rect);
 }
