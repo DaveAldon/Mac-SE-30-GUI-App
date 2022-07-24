@@ -24,8 +24,8 @@ You do not have a command line interface in order to be a "power user." You have
 There are a couple major players to choose from, and I wanted to mention the ones I've tried, and which one I ultimately went with:
 
 1. [Macintosh Programmer's Workshop](https://p2k.unibabwi.ac.id/IT/en/2821-2718/Apple's-MPW-C_11117_p2k-unibabwi.html) (MPW), created by Apple themselves. It provides a "think different" approach to development. More on that later.
-2. [Code Warrior](https://en.wikipedia.org/wiki/CodeWarrior), created by Metrowerks, one of the first development platforms that supported both the Motorola 68k *and* PowerPC architectures. It was later known as **Classic IDE**, and then became what we more commonly know as **Eclipse**.
-3. [THINK C](https://en.wikipedia.org/wiki/THINK_C), created by Think Technologies and then acquired by Symantec, it was viewed as the **standard** environment for developers, as MPW was was considered an overpriced niche product, and Code Warrior wouldn't come out until the 1990s.
+2. [Code Warrior](https://en.wikipedia.org/wiki/CodeWarrior), created by Metrowerks, one of the first development platforms that supported both the Motorola 68k *and* PowerPC architectures. It was later known as **Classic IDE**, and then became what is more commonly know as **Eclipse**.
+3. [THINK C](https://en.wikipedia.org/wiki/THINK_C), created by Think Technologies and then acquired by Symantec, was viewed as the **standard** environment for developers, as MPW was considered an overpriced niche product, and Code Warrior wouldn't come out until the 1990s.
 
 ##### A side note on MPW
 
