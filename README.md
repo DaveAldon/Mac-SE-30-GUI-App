@@ -103,8 +103,8 @@ So now that you know the **why**, and a little bit about the tools, let's break 
 
 ### What's Next
 
-I added some documentation to the code to help explain what's going on, but there's a lot more to explore in the future. This app is very simple, and I would love to work on something more useful in the future.
+I added some documentation to the code to help explain what's going on, but there's a lot more to explore in the future. The app in this repo is very simple, and I would love to create guides on how to debug using THINK C, how to manage memory better, and how to create a more interactive GUI.
 
 If you'd like to read about where the library references from this app come from and how to use them, I highly recommend checking out [this website](https://vintageapple.org/macprogramming/) which has hundreds of vintage Macintosh development books available. 
 
-*Remember, with 40+ year old technology you can't expect to be able to Google all your questions. Sometimes you just need to read a book written by the experts from that time period.*
+*Remember, with 40+ year old technology you can't expect to be able to Google all of your questions. Sometimes you just need to read a book written by the experts from that time period.*
