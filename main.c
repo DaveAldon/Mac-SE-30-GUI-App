@@ -57,9 +57,11 @@ main()
 						SystemClick(&event, event_win);
 						break;
 					case inDrag:
+                        // Handles dragging the window
 						DragWindow(event_win, event.where, &screenBits.bounds);
 						break;
 					case inGoAway:
+                        // Handles if you click and hold on the close button, but drag away, cancelling the action
 						if(TrackGoAway(event_win, event.where))
 							quitting = 1;
 						break;		
