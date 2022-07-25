@@ -1,12 +1,12 @@
-<img src="./resources/banner.png" width="100%">
+<img src="resources/banner.png" width="100%">
 
 This is an example of an app written in C for a Macintosh SE/30 v1.0 running System 6.0.8 - 7.1.
 
 ### Why?
 
 <p float="left">
-<img src="./resources/example1.png" width="45%">
-<img src="./resources/example2.png" width="45%">
+<img src="resources/example1.png" width="45%">
+<img src="resources/example2.png" width="45%">
 </p>
 
 The Macintosh SE 30 v1.0 was the first computer I ever used growing up. It still works great, and I wanted to learn more about the development process people used almost 40 years ago. Applications made back then had to be lean and use resources as wisely as possible. Typically you're dealing with around 1-5mb of RAM, so programs have to carefully load in resources. 
@@ -65,15 +65,15 @@ So now that you know the **why**, and a little bit about the tools, let's break 
 2. Choose your new folder location and name your project whatever you like, and then go to Source -> Add. This is where we add our library dependencies
 3. You need to add `MacTraps` (contains all of the GUI libraries we need) located in `THINK C 5.0 Folder` if you use the install linked from this repo, and `ANSI-small` in `C Libraries`. You can use the other `ANSI` files instead, but our app isn't very complicated, so it will keep the resources leaner in during development
 
-<img src="./resources/resources.png" width="75%">
+<img src="resources/resources.png" width="75%">
 
 4. With your project open, go to File -> New, and name it `main.c`, and then Edit -> Options -> Language Options, and change `Strict Prototype Enforcement` to `Require Prototypes` and hit `OK`
 
-<img src="./resources/prototypes.png" width="75%">
+<img src="resources/prototypes.png" width="75%">
 
 5. Open `MacPaint`, draw a **small** picture (if it's too big, it will take up too much memory, and we're not dealing with memory management here)
 
-<img src="./resources/macpaint.png" width="75%">
+<img src="resources/macpaint.png" width="75%">
 
 6. Use the `Select` tool and select a small area of the drawing, and hit `Command+C` to copy, or Edit -> Copy. You're safe to close the app now as long as the image is still in your clipboard
 
@@ -81,25 +81,25 @@ So now that you know the **why**, and a little bit about the tools, let's break 
 
 8. With your new `.rsrc` file open, hit `Command+V` to paste, or Edit -> Paste. You'll see a `PICT` resource in the window. Open it and remember the number presented underneath your image. In this case, mine is `128`
 
-<img src="./resources/pict.png" width="75%">
+<img src="resources/pict.png" width="75%">
 
 9. Go back to your THINK C project. You should see the two libraries you added earlier, and your new `main.c` file. Double-click on `main.c` to open it
 
-<img src="./resources/dependancies.png" width="75%">
+<img src="resources/dependancies.png" width="75%">
 
 10. Add in the code from this repo's `main.c` file [here](https://github.com/DaveAldon/Mac-SE-30-GUI-App/blob/main/main.c)
 
 11. Go to Project -> Run, and accept any requests to update the makefile or project, and wait for everything to compile
 
-<img src="./resources/run.png" width="75%">
+<img src="resources/run.png" width="75%">
 
 12. If you get an `out of memory error`, you likely just need to shut down all other opened applications and windows. Remember, we're dealing with extremely small amounts of memory
 
-<img src="./resources/error.png" width="75%">
+<img src="resources/error.png" width="75%">
 
 13. If everything went well, you should see a window with your image! The window is draggable, closable using the top left button, and if you drag the window so that it's partly off the screen and then bring it back, it will redraw itself!
 
-<img src="./resources/success.png" width="75%">
+<img src="resources/success.png" width="75%">
 
 ### What's Next
 
